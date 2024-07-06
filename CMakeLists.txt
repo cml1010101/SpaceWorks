@@ -8,6 +8,8 @@ find_package(Boost 1.74.0 REQUIRED COMPONENTS log)
 find_package(OpenGL REQUIRED)
 # Find GLEW
 find_package(GLEW REQUIRED)
+# Find GLM
+find_package(glm REQUIRED)
 include_directories("include")
 add_executable(SpaceWorks "src/main.cpp")
-target_link_libraries(SpaceWorks glfw Boost::log OpenGL::GL GLEW::GLEW)
+target_link_libraries(SpaceWorks glfw Boost::log OpenGL::GL GLEW::GLEW glm::glm)
